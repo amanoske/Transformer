@@ -20,7 +20,12 @@ namespace Transformer
         {
             return decoder.decode(decode_value, role).ToString();
         }
-
+        
+        public string role
+        {
+            get {return role;}
+            set {role = VALUE;}
+        }
         Connection client_connection;
         Encoder encoder;
         Decoder decoder;
