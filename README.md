@@ -16,5 +16,5 @@ string encoded_ssn = transform.encode(encoded_ssn);
 //Do whatever you want with encoded_ssn here (for example: put it in a DB) as it's ciphertext
 
 //Decode a social security number
-volatile string decoded_ssn = transform.decode(encoded_ssn);
+string decoded_ssn = transform.decode(encoded_ssn);
 ````
