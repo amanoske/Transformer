@@ -5,7 +5,9 @@ Transformer is a C#.net class library that leverages [SharpVault](https://github
 Once you have configured your Vault system and auth method, Transform simplifies the process of encoding and decoding data in a threadsafe manner. 
 
 ````c#
-//asssume IVaultClient client initialized, roles within Endpoint configured for "FPE-role." See SharpVault for more details
+//asssume IVaultClient client initialized, roles within Endpoint configured for "FPE-role." 
+//See SharpVault for more details
+
 Transformer transform = new Transformer(client);
 transform.setRole("FPE-role");
 
