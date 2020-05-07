@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using VaultSharp;
 using System.IO;
 
@@ -12,12 +12,13 @@ namespace Transformer
             encoder = new Encoder(client_connection);
             decoder = new Decoder(client_connection);
         }
-        public String encode(String encode)
+        public String encode(String encode_value, String role)
         {
+            return encoder.encode(encode_value, role).ToString();
         }
-        public String decode(String decode)
+        public String decode(String decode_value, String role)
         {
-
+            return decoder.decode(decode_value, role).ToString();
         }
 
         Connection client_connection;
