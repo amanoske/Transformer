@@ -10,8 +10,8 @@ Transformer transform = new Transformer(client);
 transform.setRole("FPE-role");
 
 //Encode a set of text
-String encode_me = transform.encode(encode_me);
+string encode_me = transform.encode(encode_me);
 
 //Decode encoded text
-String decode_me = transform.decode(decode_me);
+string decode_me = transform.decode(decode_me);
 ````
