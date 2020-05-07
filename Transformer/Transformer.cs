@@ -12,19 +12,28 @@ namespace Transformer
             encoder = new Encoder(client_connection);
             decoder = new Decoder(client_connection);
         }
-        public String encode(String encode_value, String role)
-        {
+        
+       public String encode(String encode_value)
+       {
             return encoder.encode(encode_value, role).ToString();
+       }
+        public String encode(String encode_value, String temp_role)
+        {
+            return encoder.encode(encode_value, temp_role).ToString();
         }
-        public String decode(String decode_value, String role)
+        public String decode(String decode_value)
         {
             return decoder.decode(decode_value, role).ToString();
+        }
+        public String decode(String decode_value, String temp_role)
+        {
+            return decoder.decode(decode_value, temp_role).ToString();
         }
         
         public string role
         {
             get {return role;}
-            set {role = VALUE;}
+            set {role = value;}
         }
         Connection client_connection;
         Encoder encoder;
