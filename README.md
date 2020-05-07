@@ -9,11 +9,12 @@ Once you have configured your Vault system and auth method, Transform simplifies
 //See SharpVault for more details
 
 Transformer transform = new Transformer(client);
-transform.setRole("FPE-role");
+transform.role = "FPE-SSN";
 
-//Encode a set of text
-string encode_me = transform.encode(encode_me);
+//Encode a social security number
+string encoded_ssn = transform.encode(encoded_ssn);
+//Do whatever you want with encoded_ssn here (for example: put it in a DB) as it's ciphertext
 
-//Decode encoded text
-string decode_me = transform.decode(decode_me);
+//Decode a social security number
+volatile string decoded_ssn = transform.decode(encoded_ssn);
 ````
